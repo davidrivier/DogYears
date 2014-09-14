@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         humanYearsTexfield.resignFirstResponder()
         
-        dogYearsLabel.text = "\(dogYears * constantHumanToDog)" + " in dog years"
+        dogYearsLabel.text = "\(dogYears * constantHumanToDog)" + " in human years"
         
         
         
