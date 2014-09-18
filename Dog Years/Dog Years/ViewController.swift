@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func convertHumanIntoYears(sender: UIButton) {
         
-        
+
         let dogYears = humanYearsTexfield.text.toInt()!
         
         let constantHumanToDog = 7
@@ -48,11 +48,39 @@ class ViewController: UIViewController {
         
         
         
+    }
+    
+    
+    
+    @IBAction func convertIntoRealDogYears(sender: UIButton) {
+        
+        let realDogYears = Double(( humanYearsTexfield.text as NSString).doubleValue)
+        dogYearsLabel.hidden = false
+        humanYearsTexfield.resignFirstResponder()
+        
+        if realDogYears <= 2 {
+            let constantHumanToDog = 10.5
+            dogYearsLabel.text = "\(realDogYears * constantHumanToDog)" + " in real human years"
+            
+        }
+        
+        else  {
+            let dogYearMore2 = (10.5 * 2) + (realDogYears - 2) * 4
+     
+            dogYearsLabel.text = "\(dogYearMore2)" + " in real human years"
+        }
+        
+        }
+        
+        
+        
+        
         
     }
     
     
+    
 
 
-}
+
 
